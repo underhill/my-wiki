@@ -102,7 +102,7 @@ Ditch unity for gnome
 sudo apt-get install gnome-session-flashback
 ```
 
-# Get rid of guest
+Get rid of guest
 In Gnome
 ```
 sudo apt-get remove gdm-guest-session
