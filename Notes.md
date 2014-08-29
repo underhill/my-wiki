@@ -9,7 +9,7 @@ Search `apt-cache search <search_term>`
 
 Info `apt-cache show <package_name>`
 
-# packages
+Installed
 sudo apt-get -y install vim
 sudo apt-get -y install htop
 sudo apt-get -y install git
