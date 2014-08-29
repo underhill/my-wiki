@@ -3,7 +3,7 @@
 ## packages
 Update index `sudo apt-get update`
 
-Upgrade `sudo apt-get upgrade`
+Upgrade ```sudo apt-get upgrade```
 
 Search `apt-cache search <search_term>`
 
