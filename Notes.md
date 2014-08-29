@@ -17,10 +17,11 @@ apt-cache search <search_term>
 ```
 
 Info
-```apt-cache show <package_name>```
+```
+apt-cache show <package_name>
+```
 
 Installed
-
 ```
 sudo apt-get -y install vim
 sudo apt-get -y install htop
