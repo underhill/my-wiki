@@ -1,7 +1,8 @@
 # Ubuntu
 
 ## packages
-Update index `sudo apt-get update`
+Update index 
+```sudo apt-get update```
 
 Upgrade ```sudo apt-get upgrade```
 
