@@ -2,6 +2,7 @@
 
 ## packages
 Update the Package Index
+
 `sudo apt-get update`
 
 # Upgrade Packages
