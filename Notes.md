@@ -39,7 +39,7 @@ cd /usr/java
 sudo ln -s jdk<version> latest
 ```
 
-A better way
+A better way but uses 3rd party repo
 ```
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
@@ -47,6 +47,7 @@ sudo apt-get install oracle-java7-installer
 ```
 
 # Chrome
+This doesn't work - get an error about non-existent repo
 ```
 sudo apt-get install libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -81,7 +82,7 @@ sudo apt-get install jenkins
 ```
 
 # OS changes
-grub
+Grub - change default to Windows
 ```
 sudo cp /etc/default/grub /etc/default/grub.bak
 sudo vim /etc/default/grub
@@ -91,12 +92,35 @@ sudo vim /etc/default/grub
 sudo update-grub
 ```
 
-Disable shopping suggestions unity dash scopes
+Disable shopping suggestions in Unity dash scopes
 ```
 gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope', 'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', 'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
 ```
 
 Ditch unity for gnome
 ```
-sudo apt-get install gnome-session-flashback\
+sudo apt-get install gnome-session-flashback
+```
+
+# Get rid of guest
+In Gnome
+```
+sudo apt-get remove gdm-guest-session
+```
+In Unity
+```
+sudo sh -c 'printf "[SeatDefaults]\nallow-guest=false\n" >/usr/share/lightdm/lightdm.conf.d/50-no-guest.conf'
+```
+
+Setup ssh
+
+# Misc
+Install gollum - https://github.com/gollum/gollum
+```
+sudo apt-get install ruby ruby-dev libicu-dev zlib1g-dev
+sudo gem install gollum
+cd ~/sandbox
+git init my-wiki
+setup mywiki github
+gollum 
 ```
