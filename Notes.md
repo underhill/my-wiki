@@ -11,7 +11,9 @@ Info `apt-cache show <package_name>`
 
 Installed
 
-`sudo apt-get -y install vim`
-`sudo apt-get -y install htop`
-`sudo apt-get -y install git`
-`sudo apt-get install build-essential`
+```
+sudo apt-get -y install vim
+sudo apt-get -y install htop
+sudo apt-get -y install git
+sudo apt-get install build-essential
+```
