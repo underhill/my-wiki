@@ -63,14 +63,16 @@ sudo apt-get install google-chrome-stable
 ```
 
 # Dev tools
-Install into /apps
+Install into /apps and add paths to bashrc
 ```
-mkdir /apps
+sudo mkdir /apps
 ```
 Tools
 ```
 wget http://apache.mirrors.hoobly.com/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
+sudo tar zxCf /apps apache-maven-3.2.3-bin.tar.gz
 wget http://dl.bintray.com/groovy/maven/groovy-binary-2.3.6.zip
+sudo unzip -d /apps groovy-binary-2.3.6.zip
 ```
 
 Jenkins
