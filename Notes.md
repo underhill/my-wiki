@@ -75,6 +75,9 @@ wget http://dl.bintray.com/groovy/maven/groovy-binary-2.3.6.zip
 sudo unzip -d /apps groovy-binary-2.3.6.zip
 ```
 
+Setup maven
+Create settings.xml
+
 Jenkins
 ```
 wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
