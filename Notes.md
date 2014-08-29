@@ -12,8 +12,8 @@ sudo apt-get upgrade
 ```
 
 Search
-``
-`apt-cache search <search_term>
+```
+apt-cache search <search_term>
 ```
 
 Info
