@@ -93,6 +93,7 @@ wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo a
 sudo sh -c 'echo "deb http://pkg.jenkins-ci.org/debian-stable binary/" >> /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
 sudo apt-get install jenkins
+```
 
 # OS changes
 Grub - change default to Windows
