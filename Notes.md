@@ -95,6 +95,8 @@ sudo apt-get update
 sudo apt-get install jenkins
 ```
 
+Java home is `/usr/lib/jvm/java-7-oracle/`
+
 # OS changes
 Grub - change default to Windows
 ```
