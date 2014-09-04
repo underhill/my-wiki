@@ -111,7 +111,9 @@ cp ~dev/.m2/settings.xml ~jenkins/.m2/
 chown jenkins: ~jenkins/.m2/settings.xml
 ```
 Java home is `/usr/lib/jvm/java-7-oracle/`
+
 Set maven and groovy home
+
 Set ssh key for github access
 
 
