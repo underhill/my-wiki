@@ -47,7 +47,7 @@ sudo apt-get install oracle-java7-installer
 ```
 
 ## Chrome
-This doesn't work - get an error about non-existent repo
+This does not work - get an error about non-existent repo
 ```
 sudo apt-get install libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -102,7 +102,6 @@ sudo apt-get update
 sudo apt-get install jenkins
 ```
 
-<<<<<<< HEAD
 Stable
 ```
 wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo apt-key add -
@@ -134,9 +133,7 @@ Set ssh key for github access
 
 
 # OS changes
-=======
-## OS changes
->>>>>>> 377d0591889fe326bff91f1781b6156858e6d3dd
+
 Grub - change default to Windows
 ```
 sudo cp /etc/default/grub /etc/default/grub.bak
