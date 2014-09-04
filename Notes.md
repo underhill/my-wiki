@@ -1,4 +1,4 @@
-# Ubuntu
+# Ubuntu dev box
 
 ## Packages
 Update index
@@ -29,7 +29,7 @@ sudo apt-get -y install git
 sudo apt-get install build-essential
 ```
 
-# JDK
+## JDK
 Download oracle jdk tarball
 ```
 tar zvf jdk*tar.gz
@@ -46,7 +46,7 @@ sudo apt-get update
 sudo apt-get install oracle-java7-installer
 ```
 
-# Chrome
+## Chrome
 This doesn't work - get an error about non-existent repo
 ```
 sudo apt-get install libxss1 libappindicator1 libindicator7
@@ -62,7 +62,7 @@ sudo apt-get update
 sudo apt-get install google-chrome-stable
 ```
 
-# Dev tools
+## Dev tools
 Install into /apps and add paths to bashrc
 ```
 sudo mkdir /apps
@@ -75,8 +75,23 @@ wget http://dl.bintray.com/groovy/maven/groovy-binary-2.3.6.zip
 sudo unzip -d /apps groovy-binary-2.3.6.zip
 ```
 
-Setup maven
-Create settings.xml
+Setup maven - create settings.xml
+```
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                  http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    <server>
+      <id>deployment</id>
+      <username>...</username>
+      <password>...</password>
+      <configuration></configuration>
+    </server>
+  </servers>
+
+</settings>
+```
 
 Jenkins
 Latest
@@ -87,6 +102,7 @@ sudo apt-get update
 sudo apt-get install jenkins
 ```
 
+<<<<<<< HEAD
 Stable
 ```
 wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo apt-key add -
@@ -118,6 +134,9 @@ Set ssh key for github access
 
 
 # OS changes
+=======
+## OS changes
+>>>>>>> 377d0591889fe326bff91f1781b6156858e6d3dd
 Grub - change default to Windows
 ```
 sudo cp /etc/default/grub /etc/default/grub.bak
@@ -148,9 +167,43 @@ In Unity
 sudo sh -c 'printf "[SeatDefaults]\nallow-guest=false\n" >/usr/share/lightdm/lightdm.conf.d/50-no-guest.conf'
 ```
 
-Setup ssh
+Setup ssh - gen keys if needed
+```
+ssh-keygen -t rsa -C "your_email@example.com"
+```
+Upload to github
 
-# Misc
+Setup ssh config
+```
+Host github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+Host *-relic.rhcloud.com
+  IdentityFile ~/.ssh/id_rsa
+```
+
+Test ssh
+```
+ssh -T git@github.com
+```
+
+Setup [ssh-agent](http://bose.utmb.edu/Compu_Center/ssh/SSH_HOWTO.html) - add to crontab
+```
+@reboot ssh-agent -s | grep -v echo > $HOME/.ssh-agent
+```
+
+Add to bashrc
+```
+[ -z "$SSH_CLIENT" ] && . $HOME/.ssh-agent
+
+alias keyon="ssh-add -t 10800"
+alias keyoff='ssh-add -D'
+alias keylist='ssh-add -l'
+```
+
+
+## Misc
 Install gollum - https://github.com/gollum/gollum
 ```
 sudo apt-get install ruby ruby-dev libicu-dev zlib1g-dev
