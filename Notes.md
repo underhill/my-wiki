@@ -95,13 +95,25 @@ sudo apt-get update
 sudo apt-get install jenkins
 ```
 
-Java home is `/usr/lib/jvm/java-7-oracle/`
+Install jenkins plugins
+* Git client
+* Git
+* Groovy Postbuild
+* Hudson Groovy builder
+* Maven Release
+* SCM API
+* SSH Credentials
+* Workspace Cleanup
 
 Copy maven settings to jenkins - will need to do this for each slave
 ```
 cp ~dev/.m2/settings.xml ~jenkins/.m2/
 chown jenkins: ~jenkins/.m2/settings.xml
 ```
+Java home is `/usr/lib/jvm/java-7-oracle/`
+Set maven and groovy home
+Set ssh key for github access
+
 
 # OS changes
 Grub - change default to Windows
