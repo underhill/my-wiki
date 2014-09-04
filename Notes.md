@@ -34,9 +34,9 @@ Download oracle jdk tarball
 ```
 tar zvf jdk*tar.gz
 sudo mkdir /usr/java
-sudo mv jdk<version> /usr/java
+sudo mv jdk-VERSION /usr/java
 cd /usr/java
-sudo ln -s jdk<version> latest
+sudo ln -s jdk-VERSION latest
 ```
 
 A better way but uses 3rd party repo
@@ -96,6 +96,12 @@ sudo apt-get install jenkins
 ```
 
 Java home is `/usr/lib/jvm/java-7-oracle/`
+
+Copy maven settings to jenkins - will need to do this for each slave
+```
+cp ~dev/.m2/settings.xml ~jenkins/.m2/
+chown jenkins: ~jenkins/.m2/settings.xml
+```
 
 # OS changes
 Grub - change default to Windows
