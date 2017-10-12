@@ -2,6 +2,7 @@
 
 * [jenkins java classes](http://javadoc.jenkins.io/)
 * [jenkins script console](https://wiki.jenkins.io/display/JENKINS/Jenkins+Script+Console)
+* [jenkins scripts](https://github.com/jenkinsci/jenkins-scripts/tree/master/scriptler)
 
 # [jenkins-groovy-examples](https://github.com/glenjamin/jenkins-groovy-examples)
 
